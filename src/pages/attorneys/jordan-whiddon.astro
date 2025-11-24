@@ -1,0 +1,113 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import jordanPhoto from '../../assets/attorneys/jordan.jpg';
+---
+
+<MainLayout title="Jordan Whiddon | Managing Partner">
+  <section class="space-y-10">
+    <div class="grid gap-8 lg:grid-cols-[320px_1fr]">
+      <aside class="space-y-4 rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm">
+        <div class="overflow-hidden rounded-2xl bg-white">
+          <img src={jordanPhoto.src} alt="Jordan Whiddon" class="block h-auto w-full rounded-2xl" />
+        </div>
+        <div class="space-y-1">
+          <h1 class="text-2xl font-semibold text-slate-900">Jordan Whiddon</h1>
+          <p class="text-sm font-semibold text-slate-600">Managing Partner</p>
+        </div>
+        <div class="rounded-2xl bg-white p-4 text-left">
+          <p class="text-sm font-semibold text-slate-900">Contact</p>
+          <p class="text-sm text-slate-700">
+            Email: <a href="mailto:jwhiddon@songwhiddon.com" class="underline decoration-slate-300 hover:decoration-slate-500">jwhiddon@songwhiddon.com</a>
+          </p>
+          <p class="text-sm text-slate-700">
+            Phone: <a href="tel:+12145288400" class="underline decoration-slate-300 hover:decoration-slate-500">(214) 528-8400</a>
+          </p>
+          <p class="text-sm text-slate-700">
+            Fax: <a href="tel:+12145288402" class="underline decoration-slate-300 hover:decoration-slate-500">(214) 528-8402</a>
+          </p>
+        </div>
+        <div class="rounded-2xl bg-white p-4 text-left">
+          <p class="text-sm font-semibold text-slate-900">Practices</p>
+          <ul class="mt-2 space-y-1 text-sm text-slate-700">
+            <li>Commercial litigation</li>
+            <li>Business &amp; construction law</li>
+            <li>Personal injury</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl bg-white p-4 space-y-3 text-left">
+          <p class="text-sm font-semibold text-slate-900">Courts of admittance</p>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-600">Federal</p>
+            <ul class="mt-2 space-y-1 text-sm text-slate-700">
+              <li>US Court of Federal Claims</li>
+              <li>Texas Northern District Court</li>
+              <li>Texas Eastern District Court</li>
+              <li>Texas Southern District Court</li>
+              <li>Texas Western District Court</li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-600">State</p>
+            <ul class="mt-2 space-y-1 text-sm text-slate-700">
+              <li>
+                Texas, 2014 —
+                <a href="https://www.texasbar.com/Attorneys/member.cfm?id=341436" class="underline decoration-slate-300 hover:decoration-slate-500" target="_blank" rel="noreferrer">profile</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="rounded-2xl bg-white p-4 text-left">
+          <p class="text-sm font-semibold text-slate-900">Education</p>
+          <ul class="mt-2 space-y-1 text-sm text-slate-700">
+            <li>SMU Dedman School of Law, Dallas, Texas — J.D. 2014</li>
+            <li>University of Florida, B.S. Business Administration (Finance), 2011</li>
+          </ul>
+        </div>
+      </aside>
+
+      <article class="space-y-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+        <div class="space-y-3">
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Profile</p>
+          <p class="text-lg text-slate-700">
+            Jordan builds and defends cases across commercial, construction, and injury matters. He brings finance training and hands-on
+            construction experience to guide clients through disputes and negotiations.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Industry experience</p>
+          <p class="text-sm text-slate-700">Representative areas served:</p>
+          <ul class="grid grid-cols-2 gap-x-8 gap-y-2 text-sm text-slate-700 sm:grid-cols-3">
+            <li>Construction</li>
+            <li>Personal injury</li>
+            <li>Employment and wage</li>
+            <li>Intellectual property</li>
+            <li>Landlord and tenant disputes</li>
+            <li>Nonsubscriber disputes</li>
+            <li>Worker's compensation disputes</li>
+            <li>Real estate/property disputes</li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Background</p>
+          <p class="text-sm text-slate-700">
+            Jordan's father built hundreds of homes in DFW, giving Jordan early exposure to construction issues. He graduated from SMU
+            School of Law in 2014 and earned a finance degree from the University of Florida in 2011.
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Associations</p>
+          <ul class="space-y-2 text-sm text-slate-700">
+            <li>Dallas Bar Association, Member</li>
+            <li>Texas Young Lawyer's Association, Member</li>
+            <li>Mustang Bar, Member</li>
+            <li>Dallas/Fort Worth Gator Club, Member</li>
+          </ul>
+        </div>
+
+      </article>
+    </div>
+  </section>
+</MainLayout>
