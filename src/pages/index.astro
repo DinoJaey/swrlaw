@@ -1,6 +1,10 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import heroImage from '../assets/attorneys/team-photo.jpg';
+
+const base = import.meta.env.BASE_URL || '/';
+
+const base = import.meta.env.BASE_URL || '/';
 ---
 
 <MainLayout title="SWR Law | Home">
@@ -28,13 +32,13 @@ import heroImage from '../assets/attorneys/team-photo.jpg';
           <div class="flex flex-wrap gap-3">
             <a
               class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
-              href="/contact"
+              href={`${base}contact`}
             >
               Book a consult
             </a>
             <a
               class="rounded-full border border-white/30 px-5 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white/10"
-              href="/practice"
+              href={`${base}practice`}
             >
               View practice coverage
             </a>
@@ -318,7 +322,7 @@ import heroImage from '../assets/attorneys/team-photo.jpg';
               </span>
             </div>
             <p class="text-sm font-medium text-slate-700">{attorney.role}</p>
-            <a href="/attorneys" class="mt-auto inline-flex items-center gap-1 text-sm font-semibold text-slate-800 hover:text-slate-900">
+            <a href={`${base}attorneys`} class="mt-auto inline-flex items-center gap-1 text-sm font-semibold text-slate-800 hover:text-slate-900">
               View profile
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
@@ -386,7 +390,7 @@ import heroImage from '../assets/attorneys/team-photo.jpg';
         </ul>
         <div class="pt-2">
           <a
-            href="/contact"
+            href={`${base}contact`}
             class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
           >
             Schedule a consult
@@ -409,13 +413,13 @@ import heroImage from '../assets/attorneys/team-photo.jpg';
         </p>
         <div class="flex flex-wrap gap-3">
           <a
-            href="/contact"
+            href={`${base}contact`}
             class="rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800"
           >
             Book a consult
           </a>
           <a
-            href="/practice"
+            href={`${base}practice`}
             class="rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:border-slate-900 hover:text-slate-900"
           >
             Review practice areas
