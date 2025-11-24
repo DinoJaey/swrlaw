@@ -1,5 +1,5 @@
 ---
-const base = import.meta.env.BASE_URL || '/';
+const base = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
 ---
 
 <footer class="mt-16 border-t border-slate-200 bg-white">

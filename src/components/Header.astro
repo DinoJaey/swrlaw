@@ -1,7 +1,7 @@
 ---
 import logo from '../assets/logos/swr_logo.png';
 
-const base = import.meta.env.BASE_URL || '/';
+const base = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
 
 const attorneys = [
   { label: 'Tailim Song', href: 'attorneys/tailim-song' },
