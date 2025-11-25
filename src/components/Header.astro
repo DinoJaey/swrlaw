@@ -7,43 +7,51 @@ const attorneys = [
   { label: 'Tailim Song', href: 'attorneys/tailim-song' },
   { label: 'Jordan Whiddon', href: 'attorneys/jordan-whiddon' },
   { label: 'Daniel Rowland', href: 'attorneys/daniel-rowland' },
-  { label: 'Vrinda Bhuta', href: 'attorneys/vrinda-bhuta' },
   { label: "Xinyan 'George' Zhou", href: 'attorneys/george-zhou' },
+  { label: 'Fidel', href: 'attorneys/fidel' },
+  { label: 'Ivan', href: 'attorneys/ivan' },
+  { label: 'Nathan', href: 'attorneys/nathan' },
   { label: "Heng Sun 'Andy' Cho", href: 'attorneys/andy-cho' }
 ];
 
 const staff = [
-  { label: 'Yuliana Ramirez', href: 'staff/yuliana-ramirez' },
-  { label: 'Riley Fountain', href: 'staff/riley-fountain' },
+  { label: 'Shayla', href: 'staff/shayla' },
+  { label: 'David Cho', href: 'staff/david-cho' },
   { label: 'Malia Wong', href: 'staff/malia-wong' },
-  { label: 'David Cho', href: 'staff/david-cho' }
+  { label: 'Yuliana Ramirez', href: 'staff/yuliana-ramirez' },
+  { label: 'Loryn Wong', href: 'staff/loryn-wong' },
+  { label: 'Maria G', href: 'staff/maria-g' },
+  { label: 'Maria A', href: 'staff/maria-a' },
+  { label: 'Nicholas', href: 'staff/nicholas' }
 ];
 
 const navLinks = [
-  { href: '', label: 'Home' },
   { href: 'about', label: 'About' },
-  { href: 'legal', label: 'Legal' },
   { href: 'practice', label: 'Practice' },
   { href: 'attorneys', label: 'Attorneys', children: attorneys },
   { href: 'staff', label: 'Staff', children: staff },
+  { href: 'https://secure.lawpay.com/pages/songwhiddonpllc/trust', label: 'Payment', external: true },
   { href: 'contact', label: 'Contact' }
 ];
 ---
 
 <header class="sticky top-0 z-40 w-full border-b border-slate-200 bg-white/95 backdrop-blur">
-  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 lg:px-8">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 lg:px-8 md:justify-start md:gap-8">
     <a href={base} class="flex items-center gap-3" aria-label="SWR Law home">
       <img src={logo.src} alt="SWR Law logo" class="h-14 w-auto" />
     </a>
 
-  <nav class="hidden items-center gap-3 text-base font-semibold text-slate-700 md:flex">
+  <nav class="hidden items-center gap-3 text-base font-semibold text-slate-700 md:flex md:ml-4">
       {navLinks.map((item) => (
         <div class="group relative flex h-full items-center focus-within:outline-none">
           <a
-            href={`${base}${item.href}`}
+            href={item.external ? item.href : `${base}${item.href}`}
+            rel={item.external ? 'noopener noreferrer' : undefined}
+            target={item.external ? '_blank' : undefined}
             class="flex items-center gap-2 rounded-full px-5 py-3 transition-all duration-200 hover:bg-slate-100 hover:text-slate-900 focus:bg-slate-100 focus:text-slate-900"
             aria-haspopup={item.children ? 'true' : 'false'}
             aria-expanded={item.children ? 'false' : 'false'}
+            aria-label={item.children ? `${item.label} menu` : item.label}
           >
             {item.label}
             {/* Chevron (Only visible if it has children) */}
@@ -69,6 +77,7 @@ const navLinks = [
                   <a
                     href={`${base}${child.href}`}
                     class="block px-4 py-3 text-base text-slate-600 transition-all hover:bg-slate-200 hover:text-slate-900"
+                    aria-label={child.label}
                   >
                     {child.label}
                   </a>
@@ -79,15 +88,6 @@ const navLinks = [
         </div>
       ))}
     </nav>
-
-    <div class="hidden items-center gap-4 md:flex">
-      <a
-        href={`${base}contact`}
-        class="rounded-full bg-slate-900 px-5 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-slate-800"
-      >
-        Book a consult
-      </a>
-    </div>
 
     <button
       type="button"
@@ -107,7 +107,7 @@ const navLinks = [
         {navLinks.map((item) => (
           item.children ? (
             <details class="rounded-md border border-slate-100">
-              <summary class="flex cursor-pointer items-center justify-between px-3 py-2 hover:bg-slate-50">
+              <summary class="flex cursor-pointer items-center justify-between px-3 py-2 hover:bg-slate-50" aria-label={`${item.label} menu`}>
                 <span>{item.label}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9l6 6 6-6" />
@@ -133,14 +133,6 @@ const navLinks = [
             </a>
           )
         ))}
-        <div class="flex flex-wrap gap-2 pt-2">
-          <a
-            href={`${base}contact`}
-            class="flex-1 rounded-md bg-slate-900 px-3 py-2 text-center text-white transition hover:bg-slate-800"
-          >
-            Book a consult
-          </a>
-        </div>
       </div>
     </div>
 </header>

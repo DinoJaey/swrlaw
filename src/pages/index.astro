@@ -17,7 +17,7 @@ const base = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
       <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-900/20 to-slate-900/0"></div>
     </div>
     <div class="relative bg-gradient-to-b from-slate-950 to-slate-900">
-      <div class="mx-auto grid max-w-6xl gap-10 px-6 py-12 md:grid-cols-[1.1fr_0.9fr] md:px-10 lg:px-14">
+      <div class="mx-auto grid max-w-screen-2xl gap-10 px-5 py-12 md:grid-cols-[1.1fr_0.9fr] md:items-start md:px-10 lg:px-12">
         <div class="space-y-6">
           <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-200">Dallas roots · Texas &amp; California reach</p>
           <h1 class="text-4xl font-semibold leading-tight sm:text-5xl">
@@ -272,7 +272,7 @@ const base = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
           type="button"
           class="w-full rounded-xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800"
         >
-          Submit for review
+          Submit
         </button>
         <p class="text-xs text-slate-500">Submitting this form does not create an attorney–client relationship.</p>
       </form>
@@ -397,56 +397,6 @@ const base = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
             </svg>
           </a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="mt-16 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl">
-    <div class="grid gap-8 px-6 py-12 md:grid-cols-[1.2fr_0.8fr] md:px-10 lg:px-14 lg:py-14">
-      <div class="space-y-4">
-        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Ready to move</p>
-        <h2 class="text-3xl font-semibold text-slate-900 sm:text-4xl">Let’s discuss your timeline</h2>
-        <p class="max-w-3xl text-lg text-slate-700">
-          Share your deadlines and objectives. We’ll respond within one business day with a plan to protect your position.
-        </p>
-        <div class="flex flex-wrap gap-3">
-          <a
-            href={`${base}contact`}
-            class="rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800"
-          >
-            Book a consult
-          </a>
-          <a
-            href={`${base}practice`}
-            class="rounded-full border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:border-slate-900 hover:text-slate-900"
-          >
-            Review practice areas
-          </a>
-        </div>
-        <p class="text-xs text-slate-500">
-          No attorney–client relationship is formed until an engagement is signed. Past results do not guarantee future outcomes.
-        </p>
-      </div>
-      <div class="rounded-2xl border border-slate-100 bg-slate-50 p-5 text-sm text-slate-700">
-        <p class="font-semibold text-slate-900">Service footprint</p>
-        <ul class="mt-3 space-y-2">
-          <li class="flex items-start gap-2">
-            <span class="mt-1 h-2 w-2 rounded-full bg-slate-500"></span>
-            Dallas-based with Texas and California matters.
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="mt-1 h-2 w-2 rounded-full bg-slate-500"></span>
-            Concussion, business disputes, construction, land use, and injury.
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="mt-1 h-2 w-2 rounded-full bg-slate-500"></span>
-            Emergency readiness for TROs and injunctions.
-          </li>
-          <li class="flex items-start gap-2">
-            <span class="mt-1 h-2 w-2 rounded-full bg-slate-500"></span>
-            Clear communication from the attorneys doing the work.
-          </li>
-        </ul>
       </div>
     </div>
   </section>

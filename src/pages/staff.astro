@@ -1,0 +1,120 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+
+const base = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
+
+const staff = [
+  { name: 'Yuliana Ramirez', role: 'Office Manager', specialty: 'Operations leadership, scheduling, and client coordination.' },
+  { name: 'Malia Wong', role: 'Assistant Office Manager', specialty: 'Office operations, vendor coordination, and client experience.' },
+  { name: 'Shayla', role: 'Paralegal', specialty: 'Litigation and case coordination across practice areas.' },
+  { name: 'David Cho', role: 'Legal Assistant', specialty: 'Intake support, scheduling, and document prep.' },
+  { name: 'Loryn Wong', role: 'Legal Assistant', specialty: 'Research, filings, and hearing prep.' },
+  { name: 'Maria G', role: 'Legal Assistant', specialty: 'Discovery support, case organization, and deadlines.' },
+  { name: 'Maria A', role: 'Legal Assistant', specialty: 'Client communication, document management, and filings.' },
+  { name: 'Nicholas', role: 'Legal Assistant', specialty: 'Drafting assistance, service coordination, and logistics.' }
+];
+---
+
+<MainLayout title="Staff | SWR Law">
+  <section
+    class="relative -mt-4 overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white shadow-xl lg:-mt-6"
+    style="width: 100vw; margin-left: calc(50% - 50vw);"
+  >
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute -left-16 top-10 h-40 w-40 rounded-full bg-blue-300/40 blur-3xl"></div>
+      <div class="absolute right-0 bottom-0 h-56 w-56 rounded-full bg-white/15 blur-3xl"></div>
+    </div>
+    <div class="relative mx-auto max-w-screen-2xl px-6 py-14 lg:px-12">
+      <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div class="space-y-4">
+          <h1 class="text-4xl font-semibold leading-tight sm:text-5xl">Staff supporting your matter</h1>
+          <p class="max-w-3xl text-lg text-slate-100/90">
+            Intake, scheduling, filings, and communication handled by the same team that keeps your case moving—fast, clear, and coordinated.
+          </p>
+          <div class="flex flex-wrap gap-3 text-sm font-semibold text-slate-100/90">
+            <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2">
+              <span class="h-2 w-2 rounded-full bg-emerald-300"></span>
+              Rapid responses
+            </span>
+            <span class="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2">
+              Bilingual support available
+            </span>
+            <span class="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2">
+              Texas &amp; California matters
+            </span>
+          </div>
+        </div>
+        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl ring-1 ring-white/15 backdrop-blur">
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-blue-200">What we handle</p>
+          <ul class="mt-4 space-y-3 text-sm text-slate-100">
+            <li class="flex items-start gap-2">
+              <span class="mt-1 h-2 w-2 rounded-full bg-emerald-300"></span>
+              Intake triage, conflict checks, and scheduling.
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="mt-1 h-2 w-2 rounded-full bg-emerald-300"></span>
+              Filings, service coordination, and discovery support.
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="mt-1 h-2 w-2 rounded-full bg-emerald-300"></span>
+              Client updates, hearing prep, and vendor management.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-screen-2xl px-6 py-12 lg:px-12 lg:py-14">
+    <div class="mb-8 space-y-2">
+      <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Meet your legal support team</p>
+      <h2 class="text-3xl font-semibold text-slate-900 sm:text-4xl">Dedicated staff coordinating your case</h2>
+      <p class="max-w-3xl text-lg text-slate-700">
+        The staff coordinating your case, filings, and day-to-day communication with the attorneys.
+      </p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      {staff.map((person) => (
+        <article class="group flex h-full flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl font-semibold text-slate-900">{person.name}</h3>
+            </div>
+            <p class="text-sm font-semibold text-slate-700">{person.role}</p>
+            <p class="text-sm text-slate-600">{person.specialty}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-screen-2xl px-6 pb-16 lg:px-12">
+    <div class="grid gap-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm lg:grid-cols-[1.1fr_0.9fr] lg:p-8 lg:items-start">
+      <div class="space-y-3">
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">How we help</p>
+        <h3 class="text-2xl font-semibold text-slate-900 sm:text-3xl">Seamless intake to resolution</h3>
+        <p class="text-slate-700">
+          Conflict checks, scheduling, and filings are handled by the same staff you meet on day one. Clear updates, rapid coordination with attorneys, and proactive follow-up keep your matter moving.
+        </p>
+      </div>
+      <div class="grid gap-3 rounded-2xl border border-slate-100 bg-slate-50 p-4 text-sm text-slate-700">
+        <div class="flex items-start gap-2">
+          <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
+          <p><strong>Intake &amp; triage:</strong> Deadlines, documents, and conflicts cleared quickly.</p>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
+          <p><strong>Filings &amp; service:</strong> Drafts routed to attorneys, filings executed on schedule.</p>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
+          <p><strong>Client updates:</strong> Clear communication on next steps, hearings, and deliverables.</p>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
+          <p><strong>Coordination:</strong> Medical records, expert consults, and vendor management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>

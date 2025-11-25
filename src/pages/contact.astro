@@ -1,0 +1,111 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+
+const base = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
+---
+
+<MainLayout title="Contact | SWR Law">
+  <section class="mx-auto grid max-w-screen-xl gap-10 px-6 py-12 text-left lg:grid-cols-2 lg:gap-12 lg:px-8">
+    <div class="space-y-6 lg:pr-6">
+      <div class="space-y-3">
+        <h2 class="text-3xl font-semibold text-slate-900 sm:text-4xl">Song Whiddon Rowland, PLLC</h2>
+        <div class="space-y-1 text-slate-700">
+          <p>8131 Lyndon B Johnson Fwy, Suite 770</p>
+          <p>Dallas, TX 75251</p>
+          <p>Phone: <a class="text-slate-800 underline decoration-slate-300 hover:decoration-slate-500" href="tel:+12145288400">(214) 528-8400</a></p>
+          <p>Email: <a class="text-slate-800 underline decoration-slate-300 hover:decoration-slate-500" href="mailto:info@songwhiddon.com">info@songwhiddon.com</a></p>
+        </div>
+      </div>
+      <div class="space-y-2 text-slate-700">
+        <p class="text-lg font-semibold text-slate-900">Office Hours</p>
+        <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+        <p>Saturday &amp; Sunday: Closed</p>
+      </div>
+      <div class="overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
+        <iframe
+          class="h-[320px] w-full"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.957875656626!2d-96.7681935243311!3d32.925711173601755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c2039aaee795d%3A0x95cb834ca8b95c51!2sSong%20Whiddon%2C%20PLLC!5e0!3m2!1sen!2sus!4v1764026590629!5m2!1sen!2sus"
+          style="border:0;"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Song Whiddon office map"
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg lg:p-8">
+      <div class="space-y-2">
+        <h2 class="text-2xl font-semibold text-slate-900 sm:text-3xl">Get in touch</h2>
+      </div>
+      <form class="mt-6 space-y-4" action="https://formspree.io/f/xpwzwkvq" method="POST">
+        <div>
+          <label class="block text-sm font-semibold text-slate-800" for="name">Your Name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2 text-sm text-slate-900 shadow-sm focus:border-slate-500 focus:outline-none"
+            placeholder="Your full name"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-slate-800" for="email">Your Email</label>
+          <input
+            id="email"
+            name="_replyto"
+            type="email"
+            required
+            class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2 text-sm text-slate-900 shadow-sm focus:border-slate-500 focus:outline-none"
+            placeholder="you@example.com"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-slate-800" for="phone">Your Phone Number</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            required
+            class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2 text-sm text-slate-900 shadow-sm focus:border-slate-500 focus:outline-none"
+            placeholder="(XXX) XXX-XXXX"
+          />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-slate-800" for="consultation">Consultation Type</label>
+          <select
+            id="consultation"
+            name="consultation"
+            class="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm focus:border-slate-500 focus:outline-none"
+          >
+            <option>Concussion / injury</option>
+            <option>Personal injury</option>
+            <option>Construction / real estate</option>
+            <option>Business / commercial dispute</option>
+            <option>Land use / zoning</option>
+            <option>General counsel / contracts</option>
+            <option>Other civil matter</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-slate-800" for="details">Your Message</label>
+          <textarea
+            id="details"
+            name="details"
+            rows="5"
+            required
+            class="mt-1 w-full rounded-xl border border-slate-200 px-3 py-2 text-sm text-slate-900 shadow-sm focus:border-slate-500 focus:outline-none"
+            placeholder="Share facts, locations, and goals"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="w-full rounded-xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </section>
+</MainLayout>

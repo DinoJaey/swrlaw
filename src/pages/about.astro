@@ -1,0 +1,161 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+
+const base = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
+---
+
+<MainLayout title="About | SWR Law">
+  <section class="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white shadow-xl">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute -left-12 top-8 h-36 w-36 rounded-full bg-blue-300/40 blur-3xl"></div>
+      <div class="absolute right-0 bottom-0 h-52 w-52 rounded-full bg-white/20 blur-3xl"></div>
+    </div>
+    <div class="relative mx-auto max-w-screen-2xl px-6 py-14 lg:px-12">
+      <p class="text-sm font-semibold uppercase tracking-[0.3em] text-blue-200">About SWR Law</p>
+      <h1 class="mt-3 text-4xl font-semibold leading-tight sm:text-5xl">Courtroom-ready counsel for businesses and injury clients</h1>
+      <p class="mt-4 max-w-3xl text-lg text-slate-100/90">
+        Trial-focused attorneys serving Texas and California. We pair fast intake with clear strategy for disputes, construction matters, concussion and injury claims, and advisory work for operators.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3 text-sm font-semibold text-slate-100/90">
+        <span class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2">
+          <span class="h-2 w-2 rounded-full bg-emerald-300"></span>
+          Rapid intake &amp; triage
+        </span>
+        <span class="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2">
+          Texas &amp; California licensed
+        </span>
+        <span class="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-2">
+          Litigation-first preparation
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-screen-2xl px-5 py-12 lg:px-12 lg:py-14">
+    <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+      <div class="space-y-6">
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Mission &amp; philosophy</p>
+        <h2 class="text-3xl font-semibold text-slate-900 sm:text-4xl">Client-first, courtroom-ready</h2>
+        <p class="text-lg text-slate-700">
+          We combine trial readiness with pragmatic advice. Every matter gets early issue-spotting, deadlines mapped, and a clear plan for negotiation, motion practice, or trial.
+        </p>
+        <div class="grid gap-4 sm:grid-cols-2">
+          {[
+            { title: 'Speed & clarity', copy: 'Same-day intake review and next steps for urgent matters.' },
+            { title: 'Lean teams', copy: 'Work directly with the attorneys and staff handling your case.' },
+            { title: 'Transparent process', copy: 'Milestones, costs, and timelines shared early and often.' },
+            { title: 'Cross-jurisdiction', copy: 'Coverage for TX and CA filings, negotiations, and appearances.' }
+          ].map((item) => (
+            <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+              <p class="text-base font-semibold text-slate-900">{item.title}</p>
+              <p class="text-sm text-slate-700">{item.copy}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div class="flex items-center justify-between gap-3">
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Focus areas</p>
+          <p class="text-xs text-slate-500">TX &amp; CA coverage</p>
+        </div>
+        <div class="mt-4 grid gap-4 lg:grid-cols-2">
+          {[
+            { title: 'Concussion & injury', copy: 'Athletic and catastrophic injury claims with medical coordination and negotiation strategy.' },
+            { title: 'Business litigation', copy: 'Contracts, fraud, partner disputes, TROs, injunctions, and emergency relief.' },
+            { title: 'Construction & real estate', copy: 'Defect claims, liens, payment conflicts, zoning, and land use advocacy.' },
+            { title: 'General counsel', copy: 'Risk, contracts, compliance, and operational support for grocers and retailers.' }
+          ].map((item) => (
+            <div class="rounded-2xl border border-slate-100 bg-slate-50 p-4 shadow-sm">
+              <p class="text-base font-semibold text-slate-900">{item.title}</p>
+              <p class="text-sm text-slate-700">{item.copy}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-screen-2xl px-5 pb-14 lg:px-12 lg:pb-16">
+    <div class="space-y-10">
+      <div class="space-y-6">
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Team highlights</p>
+        <h2 class="text-3xl font-semibold text-slate-900 sm:text-4xl">Leadership and admissions</h2>
+        <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-3">
+          {[
+            { title: 'Tailim Song', copy: 'Managing Partner · TX & CA', detail: 'Litigation, injury, and business disputes.' },
+            { title: 'Jordan Whiddon', copy: 'Managing Partner · TX', detail: 'Commercial litigation and emergency relief.' },
+            { title: 'Daniel Rowland', copy: 'Partner · TX', detail: 'Construction and real estate disputes.' }
+          ].map((person) => (
+            <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+              <p class="text-lg font-semibold text-slate-900">{person.title}</p>
+              <p class="text-sm font-medium text-slate-700">{person.copy}</p>
+              <p class="text-sm text-slate-600">{person.detail}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div class="flex items-center justify-between gap-3">
+          <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Select matters</p>
+          <p class="text-xs text-slate-500">Illustrative examples</p>
+        </div>
+        <div class="mt-4 grid gap-4 sm:grid-cols-1 md:grid-cols-3">
+          {[
+            { title: 'Concussion coordination', copy: 'NFL-related claim guided through medical coordination and negotiations.' },
+            { title: 'Retailer dispute defense', copy: 'Supplier conflict resolved for a regional grocer with targeted motion practice.' },
+            { title: 'Construction lien relief', copy: 'Early relief in a multi-party lien dispute, protecting timelines and budget.' }
+          ].map((item) => (
+            <div class="rounded-2xl border border-slate-100 bg-slate-50 p-4 shadow-sm">
+              <p class="text-base font-semibold text-slate-900">{item.title}</p>
+              <p class="text-sm text-slate-700">{item.copy}</p>
+            </div>
+          ))}
+        </div>
+        <p class="mt-3 text-xs text-slate-500">Past results do not guarantee future outcomes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-screen-2xl px-5 pb-16 lg:px-12">
+    <div class="grid gap-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:p-8">
+      <div class="space-y-3">
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500">Engagement</p>
+        <h3 class="text-2xl font-semibold text-slate-900 sm:text-3xl">How we start</h3>
+        <p class="text-slate-700">
+          Share your matter, deadlines, and documents. We triage within one business day, outline risks, and propose next steps—whether filings, negotiations, or advisory work.
+        </p>
+        <ul class="space-y-2 text-sm text-slate-700">
+          <li class="flex items-start gap-2">
+            <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
+            Conflict checks and scope confirmation.
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
+            Timeline mapping for urgent filings or hearings.
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
+            Transparent fees—hourly, flat, or hybrid depending on the matter.
+          </li>
+        </ul>
+      </div>
+      <div class="grid gap-4 rounded-2xl border border-slate-100 bg-slate-50 p-4 text-sm text-slate-700">
+        <div class="flex items-start gap-2">
+          <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
+          <p><strong>Contact:</strong> Call <a class="underline decoration-slate-300 hover:decoration-slate-500" href="tel:+12145288400">(214) 528-8400</a> or email <a class="underline decoration-slate-300 hover:decoration-slate-500" href="mailto:info@songwhiddon.com">info@songwhiddon.com</a>.</p>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
+          <p><strong>Service footprint:</strong> Texas &amp; California matters; remote coordination available.</p>
+        </div>
+        <div class="flex items-start gap-2">
+          <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
+          <p><strong>Response:</strong> Intake reviewed within one business day; emergencies prioritized when possible.</p>
+        </div>
+        <p class="text-xs text-slate-500">No attorney–client relationship is formed until an engagement is signed.</p>
+      </div>
+    </div>
+  </section>
+</MainLayout>
